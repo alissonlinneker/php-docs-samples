@@ -45,7 +45,7 @@ class LocalTest extends WebTestCase
         return $app;
     }
 
-    public function testHome()
+    public function test_user_upload_should_testHome()
     {
         $client = $this->createClient();
 
@@ -54,7 +54,7 @@ class LocalTest extends WebTestCase
         $this->assertTrue($client->getResponse()->isOk());
     }
 
-    public function testRead()
+    public function test_read_simple_should_testRead()
     {
         $client = $this->createClient();
 
@@ -67,7 +67,7 @@ class LocalTest extends WebTestCase
         $this->assertEquals($response->getContent(), $fileTxt);
     }
 
-    public function testWrite()
+    public function test_read_metadata_and_user_upload_and_write_caching_and_write_default_and_write_default_stream_and_write_metadata_and_write_options_and_write_public_and_write_simple_and_write_stream_should_testWrite()
     {
         $client = $this->createClient();
 
@@ -85,7 +85,7 @@ class LocalTest extends WebTestCase
         $this->assertContains($time, $response->getContent());
     }
 
-    public function testWriteOptions()
+    public function test_user_upload_and_write_options_should_testWriteOptions()
     {
         $client = $this->createClient();
 
@@ -103,7 +103,7 @@ class LocalTest extends WebTestCase
         $this->assertContains($time, $response->getContent());
     }
 
-    public function testWriteStream()
+    public function test_user_upload_and_write_stream_should_testWriteStream()
     {
         $client = $this->createClient();
 
@@ -121,7 +121,7 @@ class LocalTest extends WebTestCase
         $this->assertContains($time, $response->getContent());
     }
 
-    public function testWriteCaching()
+    public function test_user_upload_and_write_caching_should_testWriteCaching()
     {
         $client = $this->createClient();
 
@@ -139,7 +139,7 @@ class LocalTest extends WebTestCase
         $this->assertContains($time, $response->getContent());
     }
 
-    public function testWriteMetadata()
+    public function test_read_metadata_and_user_upload_and_write_metadata_should_testWriteMetadata()
     {
         $client = $this->createClient();
 
@@ -166,7 +166,7 @@ class LocalTest extends WebTestCase
         }
     }
 
-    public function testWriteDefault()
+    public function test_user_upload_and_write_default_and_write_default_stream_should_testWriteDefault()
     {
         $client = $this->createClient();
 
@@ -184,7 +184,7 @@ class LocalTest extends WebTestCase
         $this->assertContains($time, $response->getContent());
     }
 
-    public function testWriteDefaultStream()
+    public function test_user_upload_and_write_default_stream_should_testWriteDefaultStream()
     {
         $client = $this->createClient();
 
@@ -202,7 +202,7 @@ class LocalTest extends WebTestCase
         $this->assertContains($time, $response->getContent());
     }
 
-    public function testServe()
+    public function test_image_serve_and_read_serve_should_testServe()
     {
         $client = $this->createClient();
 
@@ -214,7 +214,7 @@ class LocalTest extends WebTestCase
         $this->assertContains('This is the contents of a file', CloudStorageTools::$served);
     }
 
-    public function testWritePublic()
+    public function test_write_public_should_testWritePublic()
     {
         $client = $this->createClient();
 

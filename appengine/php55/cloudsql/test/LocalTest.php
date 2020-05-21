@@ -40,7 +40,7 @@ class LocalTest extends WebTestCase
         return $app;
     }
 
-    public function testHome()
+    public function test_gae_php_mysql_app_should_testHome()
     {
         $client = $this->createClient();
 
@@ -49,7 +49,7 @@ class LocalTest extends WebTestCase
         $this->assertTrue($client->getResponse()->isOk());
     }
 
-    public function testSignGuestbook()
+    public function test_gae_php_mysql_app_should_testSignGuestbook()
     {
         $client = $this->createClient();
 
@@ -68,7 +68,7 @@ class LocalTest extends WebTestCase
         $this->assertContains($time, $response->getContent());
     }
 
-    public function testCreateTables()
+    public function test_gae_php_mysql_app_should_testCreateTables()
     {
         $client = $this->createClient();
 

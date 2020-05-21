@@ -21,7 +21,7 @@ require_once __DIR__ . '/mocks/Message.php';
 
 class LocalTest extends TestCase
 {
-    public function testSendMail()
+    public function test_gae_mail_api_should_sendMail()
     {
         ob_start();
         include __DIR__ . '/../index.php';

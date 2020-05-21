@@ -41,7 +41,7 @@ class LocalTest extends WebTestCase
         $this->assertTrue($client->getResponse()->isOk());
     }
 
-    public function testFileRequest()
+    public function test_gae_issue_request_http_bin_should_testFileRequest()
     {
         $client = $this->createClient();
 
@@ -53,7 +53,7 @@ class LocalTest extends WebTestCase
         $this->assertResponse((string) $client->getResponse());
     }
 
-    public function testCurlRequest()
+    public function test_gae_issue_request_curl_request_should_testCurlRequest()
     {
         $client = $this->createClient();
 
@@ -65,7 +65,7 @@ class LocalTest extends WebTestCase
         $this->assertResponse((string) $client->getResponse());
     }
 
-    public function testGuzzleRequest()
+    public function test_gae_issue_request_curl_request_should_testGuzzleRequest()
     {
         $client = $this->createClient();
 

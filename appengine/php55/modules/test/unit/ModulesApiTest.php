@@ -32,7 +32,7 @@ class ModulesApiTest extends WebTestCase
         return $app;
     }
 
-    public function testTopPage()
+    public function test_simple_methods_should_testTopPage()
     {
         // Set module and instance
         $module = 'my-module';
@@ -49,7 +49,7 @@ class ModulesApiTest extends WebTestCase
             $client->getResponse()->getContent());
     }
 
-    public function testAccessBackend()
+    public function test_access_another_module_should_testAccessBackend()
     {
         // Set hostname
         $hostname = 'myhost.example.com';
